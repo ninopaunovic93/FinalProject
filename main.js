@@ -11,6 +11,7 @@ const ispisKupaca = document.querySelector('#ispisKupaca')
 form.addEventListener('submit', e => {
     e.preventDefault()
 
+    //to do, u drugoj reci proveriti da li je prvo slovo veliko
     if (customerName.value !== '' && dinoName.value !== '') {
 
         if (customerName.value.charAt(0) === customerName.value.charAt(0).toUpperCase()) {
@@ -42,7 +43,8 @@ form.addEventListener('submit', e => {
 const isipisiNarudzbine = () => {
     const prikazanKupci = document.querySelectorAll('.jedanKupac')
     const kupciPrikazani = prikazanKupci.length > 0
-
+    //to do, pokusaj da se ne ispisuju kupci koji vec postoje,
+    //       treba srediti 
     if (kupciPrikazani) {
         return
     }
