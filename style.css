@@ -8,18 +8,18 @@
     height: 550px;
     border-bottom: 2px solid white;
     background-color: rgb(58, 80, 49);
-    margin-bottom: 0px;
+    margin: auto;
 }
 .wrapper {
     margin: 0px auto;
-    width: 900px;
+    width: 800px;
     height: 500px;
     color: white;
     background-image: url(./img/marko.jpeg);
     background-repeat: no-repeat;
+    background-size: contain;
 }
 form {
-    /* margin-left: 20px; */
     width: 300px;
     height: 450px;
     display: flex;
@@ -65,15 +65,14 @@ label {
 #btnNaruci {
     text-align: center;
 }
-
 .btnReadOrders {
     margin-left: 30%;
+    margin-top: 10px;
 }
 .btnReadOrders button {
     height: 25px;
     padding: 2px;
 }
-
 .naslov {
     border-bottom: 2px solid white;
     background-color: rgb(58, 80, 49);

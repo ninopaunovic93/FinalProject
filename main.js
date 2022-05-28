@@ -11,13 +11,11 @@ const ispisKupaca = document.querySelector('#ispisKupaca')
 form.addEventListener('submit', e => {
     e.preventDefault()
 
-
     if (customerName.value !== '' && dinoName.value !== '') {
 
         if (customerName.value.charAt(0) === customerName.value.charAt(0).toUpperCase()) {
 
             if (customerName.value.length > 3) {
-
 
                 myObject = {
                     kupac: customerName.value.trim(),
@@ -27,7 +25,6 @@ form.addEventListener('submit', e => {
                 myArray.push(myObject)
                 console.log(myArray)
 
-
             } else {
                 alert('ime mora imati vise od 4 slova')
                 return
@@ -36,12 +33,10 @@ form.addEventListener('submit', e => {
             alert('Prvo slovo mora biti veliko')
             return
         }
-
     } else {
         alert('morate popuniti polja')
         return
     }
-
 })
 
 const isipisiNarudzbine = () => {
@@ -60,7 +55,6 @@ const isipisiNarudzbine = () => {
 
             let opis = document.createElement('p')
             opis = e.napomena
-
 
             let dino = document.createElement('p')
             dino = e.dinosaurus
@@ -84,6 +78,5 @@ const isipisiNarudzbine = () => {
                 `
             ispisJednogKupca.append(dugme)
             ispisKupaca.append(ispisJednogKupca)
-
         })
     }
