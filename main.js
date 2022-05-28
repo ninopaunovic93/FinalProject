@@ -16,15 +16,17 @@ form.addEventListener('submit', e => {
         if (customerName.value.charAt(0) === customerName.value.charAt(0).toUpperCase()) {
 
             if (customerName.value.length > 3) {
-
+                
                 myObject = {
                     kupac: customerName.value.trim(),
                     dinosaurus: dinoName.value,
                     napomena: napomena.value
                 }
-
+              
+                
                 myArray.push(myObject)
                 console.log(myArray)
+              
             } else {
                 alert('ime mora imati vise od 4 slova')
                 return
@@ -44,7 +46,7 @@ const isipisiNarudzbine = () => {
     let ispisJednogKupca = document.createElement('div')
     ispisJednogKupca.classList.add('jedanKupac')
 
-    myArray.forEach(e => {
+    myArray.forEach((e, index) => {
         let kupac = document.createElement('p')
         kupac = e.kupac
 
@@ -56,7 +58,7 @@ const isipisiNarudzbine = () => {
 
         let dugme = document.createElement('BUTTON')
         dugme.innerHTML = `obrisi`
-        dugme.onclick = izbrisi
+        dugme.onclick = izbrisi(index)
         // dugme.setAttribute('id', 'izbrisiDugme')
         
 
@@ -72,6 +74,7 @@ const isipisiNarudzbine = () => {
     
     ispisKupaca.append(ispisJednogKupca)
 }
-const izbrisi = () => {
-    
+const izbrisi = (index) => {
+    console.log(index)
+    myArray.splice(index, 1)
 }
