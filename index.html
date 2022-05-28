@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,55 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="wrapper">
+            <form action="" method="">
+                <div id="nameContainer">
+                    <label for="customerName">Kupac:</label>
+                    <input type="text" name="customerName" id="customerName">
+                </div>
+
+                <div id="dinoContainer">
+                    <label for="dino-select">Choose a dino:</label>
+                    <select name="dinos" id="dino-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Scipionyx">Scipionyx</option>
+                        <option value="Becklespinax">Becklespinax</option>
+                        <option value="Sciurumimus">Sciurumimus</option>
+                        <option value="Hypsilophodon">Hypsilophodon</option>
+                    </select>
+                </div>
+
+                <div id="napomenaContainer">
+                    <label for="napomena">Napomena:</label>
+
+                    <textarea id="napomena" name="napomena" rows="5" cols="27">
+
+                </textarea>
+                </div>
+
+                <div id="btnNaruci">
+                    <input type="submit" value="Naruci">
+                </div>
+
+            </form>
+
+        </div>
+        <div class="btnReadOrders">
+            <button>Ispisi sve narudzbine</button>
+        </div>
+
+    </div><!-- end od CONTAINER-->
+
+    <div class="naslov">
+        <h1>Narudzbine:</h1>
+    </div><!-- end od NASLOV-->
+
+    <div>
+        
+    </div>
 </body>
+
 </html>
