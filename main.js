@@ -5,6 +5,7 @@ const customerName = document.querySelector('#customerName')
 const dinoName = document.querySelector('#dino-select')
 const napomena = document.querySelector('#napomena')
 const form = document.querySelector('form')
+const ispisKupaca = document.querySelector('#ispisKupaca')
 
 
 form.addEventListener('submit', e => {
@@ -38,3 +39,39 @@ form.addEventListener('submit', e => {
         return
     }
 })
+
+const isipisiNarudzbine = () => {
+    let ispisJednogKupca = document.createElement('div')
+    ispisJednogKupca.classList.add('jedanKupac')
+
+    myArray.forEach(e => {
+        let kupac = document.createElement('p')
+        kupac = e.kupac
+
+        let opis = document.createElement('p')
+        opis = e.napomena
+
+        let dino = document.createElement('p')
+        dino = e.dinosaurus
+
+        let dugme = document.createElement('BUTTON')
+        dugme.innerHTML = `obrisi`
+        dugme.onclick = izbrisi
+        // dugme.setAttribute('id', 'izbrisiDugme')
+        
+
+        ispisJednogKupca.innerHTML = `
+                <p><span>Kupac:</span> ${kupac}</p> <br>
+                <p><span>Napomena:</span> ${opis}</p> <br> 
+                <p><span>Dinosaurus:</span> ${dino}</p> <br>
+                
+        `
+
+        ispisJednogKupca.append(dugme)
+    })
+    
+    ispisKupaca.append(ispisJednogKupca)
+}
+const izbrisi = () => {
+    
+}
