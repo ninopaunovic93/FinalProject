@@ -85,7 +85,8 @@ label {
 }
 .kupci {
     background-color: rgb(58, 80, 49);
-    height: auto;
+    min-height: 300px;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
